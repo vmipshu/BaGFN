@@ -37,7 +37,7 @@ class BaGFN(object):
         self.optimizer_type = args.optimizer_type
 
         self.save_path = os.path.join(args.checkpoint_dir, str(run_cnt))
-        self.log_dir = args.log_dir
+        self.log_dir = os.path.join(args.log_dir, str(run_cnt))
         create_dir(self.save_path)
         create_dir(self.log_dir)
 
