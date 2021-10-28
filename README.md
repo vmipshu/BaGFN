@@ -34,12 +34,14 @@ The code runs on the following environment:
 
 ### Data Process:
 
-- Datasets (Avazu and Criteo) can be downloaded from [Kaggel Avazu](https://www.kaggle.com/c/avazu-ctr-prediction), [Kaggle Criteo](https://www.kaggle.com/c/criteo-display-ad-challenge/data)
+- Datasets (Avazu and Criteo) can be downloaded from [Kaggel Avazu](https://www.kaggle.com/c/avazu-ctr-prediction), 
+  [Kaggle Criteo](https://www.kaggle.com/c/criteo-display-ad-challenge/data)
 - Please refer to [data precoss](data/README.md).
 
 ### How to run:
   
-- Since the [train_examples.txt](data/train_examples.txt) is tiny, sample run the training with batch_size=4: `CUDA_VISIBLE_DEVICES=0 python train.py --batch_size 4`
+- Since the [train_examples.txt](data/train_examples.txt) is tiny, we run the training with batch_size=4: 
+  `CUDA_VISIBLE_DEVICES=0 python train.py --batch_size 4`
 - Default training configs can be modified in function `parse_args` of [train.py](train.py).
 - Feel free to run the code with specifically parameters on whole dataset: 
 ```shell
