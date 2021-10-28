@@ -11,7 +11,7 @@ def scale(x):
 def scale_each_fold():
     for i in range(1,11):
         print('now part %d' % i)
-        data = np.load(config.DATA_PATH + 'part'+str(i)+'/train_x.npy')
+        data = np.load(config.DATA_PATH + 'part' + str(i) + '/train_x.npy')
         part = data[:,0:13]
         for j in range(part.shape[0]):
             if j % 100000 ==0:

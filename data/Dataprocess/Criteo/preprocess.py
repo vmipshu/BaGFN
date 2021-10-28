@@ -7,9 +7,9 @@ dic= {}
 # train_x: value
 # train_i: index
 # train_y: label
-f_train_value = open(config.DATA_PATH + 'train_x.txt','w')
-f_train_index = open(config.DATA_PATH + 'train_i.txt','w')
-f_train_label = open(config.DATA_PATH + 'train_y.txt','w')
+f_train_value = open(config.DATA_PATH + 'train_x.txt', 'w')
+f_train_index = open(config.DATA_PATH + 'train_i.txt', 'w')
+f_train_label = open(config.DATA_PATH + 'train_y.txt', 'w')
 
 for i in range(39):
     dic[i] = {}

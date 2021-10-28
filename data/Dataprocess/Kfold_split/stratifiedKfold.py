@@ -4,7 +4,6 @@ import config
 import os
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
-from sklearn import preprocessing 
 
 scale = ""
 train_x_name = "train_x.npy"
@@ -14,8 +13,8 @@ Column = 13
 
 def _load_data(_nrows=None, debug = False):
 
-    train_x = pd.read_csv(config.TRAIN_X,header=None,sep=' ',nrows=_nrows, dtype=np.float)
-    train_y = pd.read_csv(config.TRAIN_Y,header=None,sep=' ',nrows=_nrows, dtype=np.int32)
+    train_x = pd.read_csv(config.TRAIN_X, header=None, sep=' ', nrows=_nrows, dtype=np.float)
+    train_y = pd.read_csv(config.TRAIN_Y, header=None, sep=' ', nrows=_nrows, dtype=np.int32)
 
 
     train_x = train_x.values
@@ -37,8 +36,8 @@ def save_x_y(fold_index, train_x, train_y):
         print("now part %d" % (i+1))
         part_index = fold_index[i]
         Xv_train_, y_train_ = _get(train_x, part_index), _get(train_y, part_index)
-        save_dir_Xv = config.DATA_PATH +  "part" + str(i+1) + "/"
-        save_dir_y = config.DATA_PATH +  "part" + str(i+1) + "/"
+        save_dir_Xv = config.DATA_PATH + "part" + str(i + 1) + "/"
+        save_dir_y = config.DATA_PATH + "part" + str(i + 1) + "/"
         if (os.path.exists(save_dir_Xv) == False):
             os.makedirs(save_dir_Xv)
         if (os.path.exists(save_dir_y) == False):
@@ -53,13 +52,13 @@ def save_x_y(fold_index, train_x, train_y):
 
 def save_i(fold_index):
     _get = lambda x, l: [x[i] for i in l]
-    train_i = pd.read_csv(config.TRAIN_I,header=None,sep=' ',nrows=None, dtype=np.int32) 
+    train_i = pd.read_csv(config.TRAIN_I, header=None, sep=' ', nrows=None, dtype=np.int32)
     train_i = train_i.values 
     feature_size = train_i.max() + 1
     print ("feature_size = %d" % feature_size) 
     feature_size = [feature_size]
     feature_size = np.array(feature_size)
-    np.save(config.DATA_PATH +  "feature_size.npy", feature_size)
+    np.save(config.DATA_PATH + "feature_size.npy", feature_size)
 
 
     print("train_i size: %d" % len(train_i))
@@ -69,7 +68,7 @@ def save_i(fold_index):
         print("now part %d" % (i+1))
         part_index = fold_index[i]
         Xi_train_ = _get(train_i, part_index)
-        save_path_Xi  = config.DATA_PATH +  "part" + str(i+1)+ '/train_i.npy'
+        save_path_Xi  = config.DATA_PATH + "part" + str(i + 1) + '/train_i.npy'
         np.save(save_path_Xi, Xi_train_)
 
 
@@ -79,7 +78,7 @@ def main():
     print('loading data done!')
 
     folds = list(StratifiedKFold(n_splits=10, shuffle=True,
-                             random_state=config.RANDOM_SEED).split(train_x, train_y))
+                                 random_state=config.RANDOM_SEED).split(train_x, train_y))
 
     fold_index = []
     for i,(train_id, valid_id) in enumerate(folds):
@@ -88,12 +87,12 @@ def main():
     print("fold num: %d" % (len(fold_index)))
 
     fold_index = np.array(fold_index)
-    np.save(config.DATA_PATH +  "fold_index.npy", fold_index)
+    np.save(config.DATA_PATH + "fold_index.npy", fold_index)
 
     save_x_y(fold_index, train_x, train_y)
     print("save train_x_y done!")
 
-    fold_index = np.load(config.DATA_PATH +  "fold_index.npy")
+    fold_index = np.load(config.DATA_PATH + "fold_index.npy")
     save_i(fold_index)
     print("save index done!")
 
