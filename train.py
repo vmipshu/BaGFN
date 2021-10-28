@@ -98,8 +98,8 @@ def __run__(args, file_name, run_cnt):
 if __name__ == "__main__":
     import os
 
-    os.environ['TF_AUTO_MIXED_PRECISION_GRAPH_REWRITE_IGNORE_PERFORMANCE'] = '1'
-    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+    # os.environ['TF_AUTO_MIXED_PRECISION_GRAPH_REWRITE_IGNORE_PERFORMANCE'] = '1'
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
     args = parse_args()
     print(args.__dict__)

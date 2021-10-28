@@ -1,7 +1,7 @@
 # Data Preprocess
 
 - Thanks to [AutoInt](https://github.com/DeepGraphLearning/RecommenderSystems/tree/master/featureRec). 
-  We employ the data preprocess from tihs repo.
+  We employ the data process from this repository.
 
 ## Input Format
 
