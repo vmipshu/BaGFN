@@ -27,7 +27,7 @@ the granularity of feature dimensions.
 The code runs on the following environment:
 - Tensorflow 1.14
 - python 3.6
-- CUDA 10.1 + cudnn 7.6.5 (For GPU)
+- CUDA 10.0+ (For GPU)
 - Other requirements: `pip install -r requirements.txt`
 
 ## Usage
