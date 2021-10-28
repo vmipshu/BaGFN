@@ -23,17 +23,17 @@ We use two public real-world datasets(Avazu, Criteo) in our experiments.
 Since the two datasets are super huge, they can not be fit into the memory as a whole. 
 In our implementation, we split the whole dataset into 10 parts and 
 we use the first file as test set and the second file as valid set. 
-We provide the codes for preprocessing these two datasets in the directory `Datapreprocess/`. 
+We provide the codes for preprocessing these two datasets in the directory `Dataprocess/`. 
 If you want to reuse these codes, you should first run `preprocess.py` to generate
 train_x.txt, train_i.txt, train_y.txt as described in Input Format. 
-Then you should run `Datapreprocess/Kfold_split/StratifiedKfold.py` to split the whole dataset into ten folds. 
+Then you should run `Dataprocess/Kfold_split/StratifiedKfold.py` to split the whole dataset into ten folds. 
 Finally you can run scale.py to scale the numerical value(optional).
 
 To help test the correctness of the code and familarize yourself with the code, 
 we upload the first 10000 samples of Criteo dataset in train_examples.txt. 
 And we provide the scripts for preprocessing and training. 
 (Please refer to `sample_preprocess.sh`, 
-you may need to modify the path in `Datapreprocess/Criteo/config.py` and `sample_preprocess.sh`).
+you may need to modify the path in `Dataprocess/Criteo/config.py` and `sample_preprocess.sh`).
 
 After you run the `sample_preprocess.sh`, 
 you should get a folder named Criteo which contains part*, feature_size.npy, fold_index.npy, train_*.txt. 
