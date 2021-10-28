@@ -57,6 +57,9 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
                         --data_path ./data/Criteo/   \
                         --run_times 1
 ```
+## Docker demo.
+
+Have a fast start with our [docker demo](docker/README.md).
 
 ## Citation
 
