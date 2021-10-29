@@ -22,6 +22,22 @@ the granularity of feature dimensions.
 
 ![main](./Figures/main.png)
 
+### Performance
+
+![overall](./Figures/overall_performance.png)
+
+### Experiment logs. 
+Since we repeated experiments and adjusted parameters, 
+the performances are better than those in the paper:
+  
+Avazu:  
+
+![Avazu](./Figures/Avazu.png)
+
+Criteo:  
+![Criteo](./Figures/Criteo.png)
+
+
 ## Requirements
 
 The code runs on the following environment:
