@@ -1,4 +1,6 @@
-# BaGFN: Broad Attentive Graph Fusion Network for High-Order Feature Interactions
+# BaGFN: Broad Attentive Graph Fusion Network for High-Order Feature Interactions 
+
+- [PDF Link](https://ieeexplore.ieee.org/document/9565146)
 
 ## Introduction
 
