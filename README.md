@@ -36,7 +36,7 @@ The code runs on the following environment:
 
 - Datasets (Avazu and Criteo) can be downloaded from [Kaggel Avazu](https://www.kaggle.com/c/avazu-ctr-prediction), 
   [Kaggle Criteo](https://www.kaggle.com/c/criteo-display-ad-challenge/data)
-- Please refer to [data precoss](data/README.md).
+- Please refer to [data process](data/README.md).
 
 ### How to run:
   
