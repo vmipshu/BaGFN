@@ -5,7 +5,7 @@
 1. Build a docker image: 
 ```shell
 cd docker
-docker build -it bagfn:v1 .
+docker build -t bagfn:v1 .
 ```
 2. Run a docker container using the bagfn:v1 image:
 ```shell
