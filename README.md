@@ -87,7 +87,7 @@ If you find BaGFN useful for your research, please consider citing the following
 
 ```
 @article{xie2021bagfn,
-    title={BaGFN: Broad Attentive Graph Fusion Network for High-Order Feature Interactions},
+    title={{BaGFN}: Broad Attentive Graph Fusion Network for High-Order Feature Interactions},
     author={Xie, Zhifeng and Zhang, Wenling and Sheng, Bin and Li, Ping and Chen, C. L. Philip},
     journal={IEEE Transactions on Neural Networks and Learning Systems},
     year={2021},
