@@ -86,16 +86,15 @@ Have a fast start with [docker demo](docker/README.md).
 If you find BaGFN useful for your research, please consider citing the following paper:
 
 ```
-@article{xie2021bagfn,
-    title={{BaGFN}: Broad Attentive Graph Fusion Network for High-Order Feature Interactions},
-    author={Xie, Zhifeng and Zhang, Wenling and Sheng, Bin and Li, Ping and Chen, C. L. Philip},
-    journal={IEEE Transactions on Neural Networks and Learning Systems},
-    year={2021},
-    volume={},
-    number={},
-    pages={1-15},
-    doi={10.1109/TNNLS.2021.3116209}
-}
+@ARTICLE{9565146,
+  author={Xie, Zhifeng and Zhang, Wenling and Sheng, Bin and Li, Ping and Chen, C. L. Philip},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={BaGFN: Broad Attentive Graph Fusion Network for High-Order Feature Interactions}, 
+  year={2023},
+  volume={34},
+  number={8},
+  pages={4499-4513},
+  doi={10.1109/TNNLS.2021.3116209}}
 ```
 
 ## Acknowledgement
